@@ -2,6 +2,7 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+func count(one: Int, two: Int) -> Int {
     return one + two
 }
 

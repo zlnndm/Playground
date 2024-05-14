@@ -9,3 +9,5 @@ func count(one: Int, two: Int) -> Int {
 print(count(one: 4, two: 242))
 
 var hello = "Hellllooo"
+
+print(1+234221-123)

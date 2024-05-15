@@ -23,5 +23,19 @@ func getUser(one: String, two: String) -> String {
 
 
 
-print(getUser(one: "Dima", two: "Zelenin"))
+                                // enums
 
+enum whereToGo: Int {
+    case north = 1, south = 2
+}
+print(whereToGo.south)
+
+var arrayOne = ["TerryOne", "TerryTwo", "TerryThree"]
+var terry = [String]()
+
+for i in arrayOne {
+    if i.hasPrefix("Terry") {
+    }
+}
+
+print(terry)

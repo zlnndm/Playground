@@ -59,3 +59,22 @@ var part = Numbers.first
 part = .second
 
 print(part)
+
+                                            // Default values
+
+func countNumbers(for number: Int, end: Int = 12) {
+    print()
+    print("\(end) times table")
+    for i in 1...end {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+
+countNumbers(for: 2)
+
+var characters = ["Steve", "Micle", "Jane", "Lola"]
+print(characters.count)
+//                   ↓ - keeps ram for that arary
+characters.removeAll(keepingCapacity: true)
+print(characters.count)
+

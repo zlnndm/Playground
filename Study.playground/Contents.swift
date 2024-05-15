@@ -78,3 +78,35 @@ print(characters.count)
 characters.removeAll(keepingCapacity: true)
 print(characters.count)
 
+                                    // Errors in functions
+
+enum PasswordError: Error {
+    case short, obvious, stupid, good
+}
+
+
+
+func checkPassword(_ password: String) throws -> String {
+    if password.count < 5 { throw PasswordError.short }
+    if password == "12345" { throw PasswordError.obvious }
+    if password == "11111" { throw PasswordError.stupid}
+    if password.count < 8 {
+        return "OK"
+    } else if password.count < 10 {
+        return "Good"
+    } else {
+        return "Great security"
+    }
+}
+
+
+
+var passcode = "123452"
+
+do {
+    let result = try checkPassword(passcode)
+    print("Passcode raiting: \(result)")
+} catch {
+    passcode = "12345!WSADF"
+    print("Password has contain scepial character: ! @ # $ % ^ & * ")
+}

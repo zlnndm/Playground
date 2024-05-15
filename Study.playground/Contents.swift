@@ -12,8 +12,16 @@ var hello = "Hellllooo"
 
 print(1+234221-123)
 
-func iHaveMyOwnGitHub() {
-    print("Wow man its cool!")
+
+
+
+                                // return values from the func - TUPLES
+
+func getUser(one: String, two: String) -> String {
+  return "You are \(one) \(two)"
 }
 
-iHaveMyOwnGitHub()
+
+
+print(getUser(one: "Dima", two: "Zelenin"))
+

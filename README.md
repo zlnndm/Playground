@@ -1,4 +1,4 @@
 # Playground
  Playground repo for study
 
-my README file
+Playground project contains history of my education in SwiftUI

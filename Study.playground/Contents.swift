@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 var greeting = "Hello, playground"
 
@@ -74,7 +75,7 @@ countNumbers(for: 2)
 
 var characters = ["Steve", "Micle", "Jane", "Lola"]
 print(characters.count)
-//                   ↓ - keeps ram for that arary
+//                   ↓ - keeps ram for that array
 characters.removeAll(keepingCapacity: true)
 print(characters.count)
 
@@ -108,5 +109,51 @@ do {
     print("Passcode raiting: \(result)")
 } catch {
     passcode = "12345!WSADF"
-    print("Password has contain scepial character: ! @ # $ % ^ & * ")
+    print("Password has to contain scepial character: ! @ # $ % ^ & * ")
 }
+
+
+/*============================================================================================================================================*/
+
+
+
+
+    enum loginErrors: Error {
+        case loginInfo, passLength
+    }
+    
+func login(loginName: String, loginPassword: String) /*throws*/-> String {
+    let generalName = "Dmitry Zelenin"
+    let generalPass = "1111"
+//                                                                if loginName != generalName { throw loginErrors.loginInfo }
+//                                                                if loginPassword != generalPass { throw loginErrors.passLength }
+//
+//                                                                var nameAccess = String()
+//                                                                var passAccess = String()
+//                                                                var fullAccess = String()
+//                                                                var isLoginInfoTrue = String()
+    
+    var isAccessGranter = String()
+    
+    if loginName != generalName || loginPassword != generalPass {
+        isAccessGranter = "Login or password are incorrect. Try again."
+    } else {
+        isAccessGranter = "Access granted."
+    }
+    print(isAccessGranter)
+    return "2"
+}
+
+
+
+
+
+
+//                                                                do {
+//                                                                    let result = try login(loginName: "Dmitry Zelenin", loginPassword: "1111")
+//                                                                    print(result)
+//                                                                } catch {
+//                                                                    print("n.")
+//                                                                }
+
+login(loginName: "Dmitry Zeenin", loginPassword: "1111")
